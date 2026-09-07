@@ -273,6 +273,17 @@
     .nom-meta{grid-template-columns:1fr 1fr;}
     .nav-links{display:none;}
   }
+  .v-media-stack{display:flex;flex-direction:column;gap:22px;}
+.v-media-stack .video-box{
+  border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;
+}
+.v-media-stack video{
+  width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000;
+}
+.v-media-stack .image-box{
+  border-radius:14px;overflow:hidden;border:1px solid var(--line);
+}
+.v-media-stack .image-box img{width:100%;display:block;}
 </style>
 </head>
 <body>
