@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuake Justice Tsekpo Jnr. — MCF Scholars Assembly Nomination</title>
+<title>Nuake Justice Tsekpo Jnr. — ALU Global Leadership Program, Silicon Valley 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <style>
@@ -52,7 +52,7 @@
   }
   .nav-name{font-weight:900;font-size:1.05rem;color:var(--ink);}
   .nav-name span{color:var(--red);}
-  .nav-links{display:flex;gap:28px;font-size:0.88rem;font-weight:700;}
+  .nav-links{display:flex;gap:24px;font-size:0.86rem;font-weight:700;}
   .nav-links a{color:var(--grey);position:relative;padding-bottom:4px;}
   .nav-links a::after{
     content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);
@@ -92,7 +92,7 @@
     font-style:normal;color:var(--red);
   }
   .hero-role{
-    margin-top:20px;font-size:1.08rem;color:var(--grey);max-width:500px;
+    margin-top:20px;font-size:1.08rem;color:var(--grey);max-width:520px;
   }
   .hero-tags{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;}
   .tag{
@@ -128,7 +128,7 @@
   }
   .kicker::before{content:"";width:20px;height:2px;background:var(--red);}
   .section-title{font-size:2.1rem;max-width:680px;color:var(--ink);}
-  .section-sub{max-width:640px;color:var(--grey);margin-top:12px;font-size:1rem;}
+  .section-sub{max-width:680px;color:var(--grey);margin-top:12px;font-size:1rem;}
 
   /* STATS */
   .stats-section{background:var(--blue-light);}
@@ -158,7 +158,7 @@
   .v-media{display:flex;flex-direction:column;gap:12px;}
   .v-media-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   .v-media-single img, .v-media-row img,
-.v-media-single video, .v-media-row video{
+  .v-media-single video, .v-media-row video{
     width:100%;border-radius:14px;border:1px solid var(--line);
     transition:transform 0.35s ease;
   }
@@ -184,32 +184,87 @@
 
   /* LEADERSHIP GRID */
   .leadership-section{background:var(--blue-light);}
-  .lead-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;
+    .lead-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;
   }
+  .lead-grid.two{grid-template-columns:repeat(2,1fr);}
   .lead-card{
     background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--line);
     transition:transform 0.25s ease, box-shadow 0.25s ease;
   }
   .lead-card:hover{transform:translateY(-6px);box-shadow:0 20px 36px -20px rgba(20,24,27,0.22);}
+  .lead-card.media-wide{grid-column:span 2;}
+  .lead-card.media-wide .lead-card-media{height:400px;}
   .lead-card-media{
     overflow:hidden;height:260px;
     background:var(--blue-light);
     display:flex;align-items:center;justify-content:center;
   }
-  .lead-card-media img{
+  .lead-card-media > img{
     width:100%;height:100%;object-fit:contain;object-position:center;
     transition:transform 0.4s ease;
   }
-  .lead-card:hover .lead-card-media img{transform:scale(1.04);}
+  .lead-card:hover .lead-card-media > img{transform:scale(1.04);}
   .lead-card-body{padding:20px 22px 24px;}
   .lead-card-icon{
     width:36px;height:36px;border-radius:8px;background:var(--red);
     display:flex;align-items:center;justify-content:center;margin-bottom:12px;
   }
   .lead-card-icon svg{width:18px;height:18px;stroke:#fff;}
-  .lead-card-body h3{font-size:1.02rem;font-weight:900;margin-bottom:8px;color:var(--ink);}
+  .lead-card-body h3{font-size:1.02rem;font-weight:900;margin-bottom:8px;color:var(--ink);line-height:1.35;}
   .lead-card-body p{font-size:0.87rem;color:var(--grey);margin:0;}
+
+  /* MEDIA STRIP — for multi-image lead cards */
+  .lead-card-media .media-strip{
+    width:100%;height:100%;display:grid;gap:3px;background:#fff;
+  }
+  .media-strip.cols-2{grid-template-columns:1fr 1fr;}
+  .media-strip.cols-3{grid-template-columns:repeat(3,1fr);}
+  .media-strip img{
+    width:100%;height:100%;object-fit:contain;object-position:center;
+    background:#fff;
+    transition:transform 0.4s ease;
+  }
+  .lead-card:hover .media-strip img{transform:scale(1.04);}
+
+  /* AWARDS */
+  .award-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;}
+  .award{
+    background:var(--white);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;display:flex;gap:16px;align-items:flex-start;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .award:hover{transform:translateY(-4px);box-shadow:0 16px 32px -18px rgba(20,24,27,0.18);}
+  .award-year{
+    font-size:0.72rem;font-weight:900;color:var(--red);background:var(--blue-light);
+    border:1px solid var(--blue-mid);border-radius:999px;padding:5px 12px;
+    white-space:nowrap;letter-spacing:0.03em;
+  }
+  .award-body h4{font-size:0.97rem;color:var(--ink);margin-bottom:6px;line-height:1.35;}
+  .award-body p{font-size:0.85rem;color:var(--grey);margin:0;}
+
+  /* MCF AWARDS MEDIA GRID */
+  .mcf-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;
+  }
+  .mcf-card{
+    background:var(--white);border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .mcf-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px -18px rgba(20,24,27,0.18);}
+  .mcf-card-media{
+    background:var(--blue-light);
+    display:flex;align-items:center;justify-content:center;
+    height:260px;overflow:hidden;
+  }
+  .mcf-card-media img{
+    width:100%;height:100%;object-fit:contain;
+    transition:transform 0.35s ease;
+  }
+  .mcf-card:hover .mcf-card-media img{transform:scale(1.03);}
+  .mcf-card-body{padding:18px 20px 20px;}
+  .mcf-card-body h4{font-size:0.95rem;font-weight:900;color:var(--ink);margin-bottom:4px;}
+  .mcf-card-body p{font-size:0.82rem;color:var(--grey);margin:0;}
 
   /* NOMINATION RESPONSE */
   .nom-box{
@@ -231,6 +286,16 @@
     padding-left:26px;position:relative;color:rgba(255,255,255,0.94);
   }
   .highlight-list li::before{content:"→";position:absolute;left:0;color:var(--blue-mid);font-weight:900;}
+
+  /* GLP FIT GRID */
+  .glp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;}
+  .glp-card{
+    background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .glp-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px -18px rgba(20,24,27,0.18);}
+  .glp-card b{display:block;font-size:1.6rem;font-weight:900;color:var(--red);margin-bottom:6px;line-height:1.15;}
+  .glp-card span{font-size:0.86rem;color:var(--grey);}
 
   /* CTA */
   .cta-section{background:var(--white);}
@@ -261,6 +326,18 @@
 
   footer{padding:34px 0;text-align:center;font-size:0.83rem;color:var(--grey);border-top:1px solid var(--line);}
 
+  .v-media-stack{display:flex;flex-direction:column;gap:22px;}
+  .v-media-stack .video-box{
+    border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;
+  }
+  .v-media-stack video{
+    width:100%;display:block;max-height:520px;object-fit:contain;background:#000;
+  }
+  .v-media-stack .image-box{
+    border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  }
+  .v-media-stack .image-box img{width:100%;display:block;}
+
   @media (max-width:860px){
     .hero-grid{grid-template-columns:1fr;}
     .hero h1{font-size:2.2rem;}
@@ -269,33 +346,67 @@
     .venture.reverse .v-media{order:1;}
     .venture.reverse .v-text{order:2;}
     .lead-grid{grid-template-columns:1fr;}
+    .lead-grid.two{grid-template-columns:1fr;}
+    .lead-card.media-wide{grid-column:span 1;}
+    .lead-card.media-wide .lead-card-media{height:260px;}
+    .award-grid{grid-template-columns:1fr;}
+    .mcf-grid{grid-template-columns:1fr;}
+    .glp-grid{grid-template-columns:1fr;}
     .cta-inner{grid-template-columns:1fr;padding:32px;}
     .nom-meta{grid-template-columns:1fr 1fr;}
     .nav-links{display:none;}
   }
-  .v-media-stack{display:flex;flex-direction:column;gap:22px;}
-.v-media-stack .video-box{
-  border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;
-}
-.v-media-stack video{
-  width:100%;display:block;max-height:520px;object-fit:contain;background:#000;
-}
-.v-media-stack .image-box{
-  border-radius:14px;overflow:hidden;border:1px solid var(--line);
-}
-.v-media-stack .image-box img{width:100%;display:block;}
 </style>
 </head>
 <body>
+
+<!--
+=====================================================================
+IMAGE MANIFEST
+=====================================================================
+ALREADY IN ns_images/ (no action needed):
+  ARSN0699.jpg                - hero portrait
+  DialSense_Award.mp4         - BahoCare award video
+  alu_spotlight.jpeg          - ALU 10-Year Impact Report, page 54
+  vunalink_award.jpg          - TechX Rwanda 2026 runner-up
+  mcn_banner.png              - Millennium Fellowship Campus Director badge
+  fmk_headshot.jpg            - Future Makers Kigali
+  firesidechat.png            - Beyond the Classroom fireside chat poster
+
+NEW PLACEHOLDERS — drop these files into ns_images/:
+  hult_prize_committee.jpg    - Hult Prize at ALU organising committee
+  ieee_hts_team.jpg           - IEEE East Africa Humanitarian Technology Summit
+  cfa_research_challenge.jpg  - CFA Institute Research Challenge team
+  student_companion_ai.jpg    - Student Companion AI interns
+  yts_launch.jpg              - Young Trade Society chapter / planning
+  sani_link.jpg               - Sani-Link waste management civic tech
+  orgscreen.jpg               - OrgScreen (Umurava AI Hackathon)
+  gmcc_2026.jpg               - Global Microfinance Case Competition delegation
+
+MCF AWARDS PLACEHOLDERS — drop these files into ns_images/:
+  mcf_award_jan_photo.jpg     - Nuake holding the January 2026 MCF award
+  mcf_award_may_photo.jpg     - Nuake holding the May 2026 MCF award
+  mcf_cert_jan.jpg            - January 2026 MCF certificate
+  mcf_cert_may.jpg            - May 2026 MCF certificate
+
+MULTI-IMAGE PLACEHOLDERS for lead cards:
+  mcn_session_1.jpg           - Millennium Fellowship session photo
+  mcn_session_2.jpg           - Millennium Fellowship cohort photo
+  firesidechat_panel.jpg      - Beyond the Classroom panel photo
+
+PLACEHOLDER FIGURES to confirm and replace: [XX]
+=====================================================================
+-->
 
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-name">Nuake Justice <span>Tsekpo Jnr.</span></div>
     <div class="nav-links">
       <a href="#ventures">Ventures</a>
+      <a href="#mcf-awards">MCF Awards</a>
       <a href="#leadership">Leadership</a>
-      <a href="#nomination">Spotlight</a>
-      <a href="#nominate">Nominate</a>
+      <a href="#other-projects">Other Projects</a>
+      <a href="#glp">Silicon Valley 2027</a>
     </div>
   </div>
 </nav>
@@ -305,12 +416,13 @@
   <div class="hero-shape2"></div>
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">MCF Scholars Assembly — 18 September 2026</div>
+      <div class="eyebrow">ALU Global Leadership Program — Silicon Valley 2027</div>
       <h1>Building ventures, <em>and the people behind them.</em></h1>
-      <p class="hero-role">Second-year BSc International Business &amp; Trade student at ALU Rwanda. Venture Lead of DialSense (BahoCare), Campus Director of the Millennium Fellowship, and 2nd-place finisher at TechX Rwanda 2026 with VunaLink.</p>
+      <p class="hero-role">Second-year BSc International Business &amp; Trade student at ALU Rwanda, on a Mastercard Foundation Scholarship. CGPA 4.46/5.0. Venture Lead &amp; CTO of DialSense (BahoCare), Campus Director of both the Millennium Fellowship and the Hult Prize at ALU, and Strategy &amp; Implementation Lead of the Young Trade Society.</p>
       <div class="hero-tags">
         <span class="tag">Entrepreneurship</span>
-        <span class="tag">Leadership</span>
+        <span class="tag">Student Leadership</span>
+        <span class="tag">Trade &amp; Investment</span>
         <span class="tag">Mastercard Foundation Scholar</span>
       </div>
     </div>
@@ -320,7 +432,7 @@
       </div>
       <div class="hero-badge">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>
-        TechX Rwanda Runner-Up
+        2026 MCF Scholars Entrepreneurship Award
       </div>
     </div>
   </div>
@@ -328,63 +440,322 @@
 
 <section class="stats-section">
   <div class="wrap">
+    <div class="kicker">At a glance</div>
+    <h2 class="section-title">Numbers, not adjectives</h2>
+    <p class="section-sub">Every figure below is drawn from an award record, a programme acceptance, or a live project with a named counterpart.</p>
     <div class="stats">
       <div class="stat">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
-        <b>3</b><span>Ventures built or co-led</span>
-      </div>
-      <div class="stat">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.2 1.2-2 3-2s3 .9 3 2-1.2 1.7-3 2-3 .8-3 2 1.2 2 3 2 3-.8 3-2"/></svg></div>
-        <b>$4K+</b><span>Raised across ventures</span>
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v6h6"/></svg></div>
+        <b>4.46/5.0</b><span>CGPA after earning 130 of 130 credits in first year</span>
       </div>
       <div class="stat">
         <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg></div>
-        <b>2</b><span>Hackathon / challenge podium finishes</span>
+        <b>3</b><span>Mastercard Foundation Scholars awards — 2× Academic Excellence (Jan &amp; May 2026) + 1 Entrepreneurship (2026)</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
+        <b>4</b><span>Ventures built or co-led across health tech, agritech, civic tech and AI</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.3 4.5 2.3 4.5 5"/></svg></div>
+        <b>26</b><span>Millennium Fellows led across 3 cohorts as Campus Director, ALU Rwanda</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+        <b>25 / 125</b><span>Hult Prize teams and students targeted as Campus Director for the 2027 cycle</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.2 1.2-2 3-2s3 .9 3 2-1.2 1.7-3 2-3 .8-3 2 1.2 2 3 2 3-.8 3-2"/></svg></div>
+        <b>$17,000+</b><span>Secured in venture seed funding ($2,000) and conference grant funding ($15,000)</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= VENTURES — FLAGSHIP (DIALSENSE) ================= -->
 <section id="ventures" class="section-border">
   <div class="wrap">
     <div class="kicker">Entrepreneurship</div>
-    <h2 class="section-title">Ventures built for real problems</h2>
-    <p class="section-sub">Each venture starts with a gap Nuake has seen firsthand — in healthcare, agriculture, or access to opportunity — and turns it into a working product with a team behind it.</p>
+    <h2 class="section-title">Flagship venture</h2>
+    <p class="section-sub">DialSense is Nuake's most advanced venture — seed-funded, incubating, with named hospital counterparts in active validation. This is the venture he would take to Silicon Valley.</p>
 
     <div class="ventures">
-
       <div class="venture">
-  <div class="v-media">
-    <div class="v-media-stack">
-      <div class="video-box">
-        <video src="ns_images/DialSense_Award.mp4" controls playsinline muted preload="metadata"></video>
-      </div>
-      <div class="image-box">
-        <img src="ns_images/alu_spotlight.jpeg" alt="BahoCare featured in ALU 10-Year Impact Report">
-      </div>
-    </div>
-  </div>
-  <div class="v-text">
+        <div class="v-media">
+          <div class="v-media-stack">
+            <div class="video-box">
+              <video src="ns_images/DialSense_Award.mp4" controls playsinline muted preload="metadata"></video>
+            </div>
+            <div class="image-box">
+              <img src="ns_images/alu_spotlight.jpeg" alt="BahoCare featured as Student Spotlight, ALU 10-Year Impact Report, page 54">
+            </div>
+          </div>
+        </div>
         <div class="v-text">
           <div class="v-badge">
             <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>
-            Venture Lead &amp; Founding Team
+            Venture Lead &amp; CTO · May 2026 – Present
           </div>
           <div class="v-name">DialSense (BahoCare)</div>
-          <p>A health-tech venture building predictive maintenance systems for hospital equipment, starting with dialysis machines, so care is not delayed by preventable equipment failure.</p>
+          <p>A retrofit IoT predictive maintenance system for critical hospital equipment, starting with dialysis machines, so that care is not delayed by a failure that could have been predicted. Nuake leads research, validation and finance.</p>
           <ul class="v-facts">
-            <li>2nd place and $2,000 seed grant, ALU Waiting Room Hackathon 2026</li>
-            <li>12-week incubation and mentorship with the ALU Centre for Health Innovation &amp; Impact</li>
-            <li>Featured as a Student Spotlight in ALU's 10-Year Impact Report</li>
-            <li>Working toward 80% of its team being current ALU students or alumni</li>
+            <li><b>2nd place</b> and a <b>$2,000 seed grant</b> at the ALU Waiting Room Hackathon 2026 — a field of 40 ALU and ALX student innovators across 8 teams</li>
+            <li>Tranche 1 of <b>$1,000 received</b>; Tranche 2 unlocks at prototype and hospital letter-of-intent milestones</li>
+            <li>In a <b>12-week incubation and mentorship programme</b> at the ALU Centre for Health Innovation &amp; Impact (CHII)</li>
+            <li>Demand validated through <b>4 Kigali hospitals</b>: King Faisal, CHUK, AHN and Rwanda Military Hospital</li>
+            <li>Featured as a <b>Student Spotlight on page 54</b> of ALU's 10-Year Impact Report</li>
+            <li>Roadmap: <b>10 machines in 3 hospitals by 2027</b>, <b>100 machines in 10 hospitals by 2030</b></li>
+            <li>Targeting <b>80% of the founding team and workforce</b> being current ALU students or alumni</li>
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="venture reverse">
+<!-- ================= MCF SCHOLARS AWARDS ================= -->
+<section id="mcf-awards" class="section-border">
+  <div class="wrap">
+    <div class="kicker">Mastercard Foundation Scholars Awards</div>
+    <h2 class="section-title">Two consecutive terms of academic excellence — and one entrepreneurship award</h2>
+    <p class="section-sub">In 2026, Nuake won the Mastercard Foundation Scholars Academic Excellence Award for both the January and May terms, and the Mastercard Foundation Scholars Entrepreneurship Award for topping the BSc International Business &amp; Trade cohort. All three were presented at the September 2026 General Assembly.</p>
+
+    <div class="mcf-grid">
+      <div class="mcf-card">
+        <div class="mcf-card-media">
+          <img src="ns_images/mcf_awards_1.jpeg" alt="Nuake receiving the January 2026 MCF Scholars Academic Excellence Award">
+        </div>
+        <div class="mcf-card-body">
+          <h4>January 2026 — Academic Excellence Award</h4>
+          <p>Receiving the award at the September 2026 General Assembly.</p>
+        </div>
+      </div>
+      <div class="mcf-card">
+        <div class="mcf-card-media">
+          <img src="ns_images/mcf_awards_2.jpeg" alt="Nuake receiving the May 2026 MCF Scholars Academic Excellence Award">
+        </div>
+        <div class="mcf-card-body">
+          <h4>May 2026 — Academic Excellence Award</h4>
+          <p>Second consecutive term winning the award. CGPA 4.46/5.0.</p>
+        </div>
+      </div>
+      <div class="mcf-card">
+        <div class="mcf-card-media">
+          <img src="ns_images/masters in Sciences Po 2028.png" alt="2026 MCF Scholars Entrepreneurship Award certificate">
+        </div>
+        <div class="mcf-card-body">
+          <h4>2026 Scholars Entrepreneurship Award</h4>
+          <p>Mastercard Foundation Scholars Entrepreneurship Award.</p>
+        </div>
+      </div>
+      <div class="mcf-card">
+        <div class="mcf-card-media">
+          <img src="ns_images/awardee.png" alt="May 2026 MCF Scholars Academic Excellence Award certificate">
+        </div>
+        <div class="mcf-card-body">
+          <h4>Certificate — May 2026</h4>
+          <p>Mastercard Foundation Scholars Academic Excellence Award.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section id="leadership" class="leadership-section section-border">
+  <div class="wrap">
+    <div class="kicker">Leadership</div>
+    <h2 class="section-title">Leading people, not just projects</h2>
+    <p class="section-sub">Six mandates where Nuake is accountable for other people's growth, budgets, and outcomes — measured in fellows, teams, sessions and placement numbers rather than titles.</p>
+
+    <div class="lead-grid">
+      <div class="lead-card media-wide">
+        <div class="lead-card-media">
+          <div class="media-strip cols-3">
+            <img src="ns_images/mcn_alu_1.png" alt="Millennium Fellowship Campus Director badge, Class of 2026">
+            <img src="ns_images/mcn_alu_2.png" alt="Millennium Fellowship in-person session">
+            <img src="ns_images/mcn_alu_4.jpeg" alt="Millennium Fellowship cohort, ALU Rwanda">
+          </div>
+        </div>
+        <div class="lead-card-body">
+          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.3 4.5 2.3 4.5 5"/></svg></div>
+          <h3>Campus Director, Millennium Fellowship — ALU Rwanda</h3>
+          <p>Leads <b>26 Millennium Fellows</b> and main campus director across 3 cohorts (70+ fellows), running <b>2 in-person sessions a week</b> — about <b>36 sessions per cohort per term</b>. Sustains a <b>71% average weekly attendance rate</b> and oversees <b>20+ live student social impact projects</b>. Built the programme's digital infrastructure, launching ALU's first official Millennium Fellowship website and LinkedIn presence.</p>
+        </div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-card-media"><img src="ns_images/hultprizealu.png" alt="Hult Prize at ALU organising committee"></div>
+        <div class="lead-card-body">
+          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg></div>
+          <h3>Campus Director, Hult Prize at ALU</h3>
+          <p>Chairs a <b>9-member organising committee</b> and runs ALU's EF Hult Prize cycle with the ALU Centre for Entrepreneurship. Targets for the cycle: <b>25 teams / 125 students entered</b>, <b>8 workshops and mentor sessions</b>, <b>500 students reached</b> through info sessions, <b>3+ teams at nationals</b>, and <b>2+ corporate sponsors</b> from 7+ proposals sent to MTN Rwanda, Norrsken House, Westerwelle Startup Haus and I&amp;M Bank Rwanda.</p>
+        </div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-card-media"><img src="ns_images/yts_launch.jpeg" alt="Young Trade Society chapter planning"></div>
+        <div class="lead-card-body">
+          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+          <h3>Strategy &amp; Implementation Lead, Young Trade Society</h3>
+          <p>Asked by the YTS co-founder in August 2026 to draft and execute a <b>3-year expansion plan</b>. The ALU chapter opens in the <b>January 2027 term</b>, targeting <b>300+ students in year one</b> across 3 trimesters, then <b>300+ more at a second Rwandan university in year 2</b>, and <b>900+ students across 3 universities by 2029</b> — with <b>30 students placed</b> into volunteer or internship roles in year one.</p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="lead-grid two">
+      <div class="lead-card">
+        <div class="lead-card-media"><img src="ns_images/ARSN0306.jpg" alt="Future Makers Kigali cohort, Westerwelle Startup Haus"></div>
+        <div class="lead-card-body">
+          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg></div>
+          <h3>Future Makers Kigali Fellow, Westerwelle Startup Haus</h3>
+          <p>Selected as <b>1 of 50 city-wide fellows</b> — and part of the <b>6% of non-Rwandan international fellows</b> — for a 6-month entrepreneurship programme at Westerwelle Startup Haus, Kigali.Competing against teams for a share prize of $7,000 in seed funding for winning teams.</p>
+        </div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-card-media">
+          <div class="media-strip cols-2">
+            <img src="ns_images/firesidechat.png" alt="Beyond the Classroom fireside chat poster">
+            <img src="ns_images/firesidechat_1.jpg" alt="Beyond the Classroom fireside chat panel">
+          </div>
+        </div>
+        <div class="lead-card-body">
+          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3c-4 0-7 2.7-7 6.3 0 2 1 3.8 2.6 5-.2 1-1 2-1.9 2.7 1.5.2 3-.2 4.2-1 .7.2 1.4.3 2.1.3 4 0 7-2.7 7-6.3S16 3 12 3z"/></svg></div>
+          <h3>Panelist, Beyond the Classroom — IBT Faculty Fireside Chat</h3>
+          <p>Selected as one of <b>3 student panelists</b> for the International Business &amp; Trade Faculty's fireside chat, connecting financial accounting theory to real student ventures — presented as "Student founders. Real lessons. Real numbers."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECOGNITION ================= -->
+<section id="recognition" class="section-border">
+  <div class="wrap">
+    <div class="kicker">Recognition &amp; Awards</div>
+    <h2 class="section-title">A verified track record</h2>
+    <p class="section-sub">Awards, selections and competitive placements — each one tied to a body that can confirm it.</p>
+
+    <div class="award-grid">
+      <div class="award">
+        <div class="award-year">Jan 2026</div>
+        <div class="award-body">
+          <h4>Mastercard Foundation Scholars Academic Excellence Award</h4>
+          <p>Awarded for the January 2026 term. Presented at the September 2026 General Assembly.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">May 2026</div>
+        <div class="award-body">
+          <h4>Mastercard Foundation Scholars Academic Excellence Award</h4>
+          <p>Awarded for the May 2026 term — the second consecutive term winning the award. CGPA 4.46/5.0.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Mastercard Foundation Scholars Entrepreneurship Award</h4>
+          <p>Awarded for topping the BSc International Business &amp; Trade cohort. Presented at the September 2026 General Assembly.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Student Spotlight — ALU 10-Year Impact Report, page 54</h4>
+          <p>Featured by the ALU Centre for Health Innovation &amp; Impact for the BahoCare venture and its 2nd-place Waiting Room Hackathon finish.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>2nd Place, ALU Waiting Room Hackathon</h4>
+          <p>Hosted by CHII under the Africa Health Collaborative's HENT pillar. 40 student innovators, 8 teams, $2,000 seed grant.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Runner-Up, TechX Rwanda 2026 Hackathon</h4>
+          <p>Awarded to VunaLink by IEEE CS SYP at Rwanda's flagship student technology hackathon.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Top 35, Umurava AI Hackathon</h4>
+          <p>Recognised for OrgScreen, an applied AI build, out of [XX] total entries.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Global Interview Stage — 180 Degrees Consulting Global Case Competition</h4>
+          <p>Led a team to the global interview stage of the world's largest student consultancy competition (client: Barefoot College).</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Coordinator — ALU's first delegation to the Global Microfinance Case Competition</h4>
+          <p>Organised ALU's inaugural delegation of 7 teams to the Melbourne GMCC 2026.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Future Makers Kigali Fellow — Westerwelle Startup Haus</h4>
+          <p>1 of 50 fellows selected city-wide; part of the 6% who are non-Rwandan international fellows.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2025</div>
+        <div class="award-body">
+          <h4>Harvard Business School Aspire Leaders Program — Graduate</h4>
+          <p>Completed the HBS Aspire Leaders Program, a selective global leadership and business programme.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2025</div>
+        <div class="award-body">
+          <h4>ALX Pathway Programme — Top score in Ghana, 96/100</h4>
+          <p>Graduated from ALX Africa's Accra campus with the highest score in Ghana, before matriculating at ALU Rwanda.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Financial Accounting — 94% final grade</h4>
+          <p>A 98/100 bookkeeping project was adopted by faculty as an institutional exemplar and a comprehensive bookkeeping framework for other students.</p>
+        </div>
+      </div>
+      <div class="award">
+        <div class="award-year">2026</div>
+        <div class="award-body">
+          <h4>Founder, Nuake Design Studio</h4>
+          <p>15+ design and motion-graphics projects delivered for clients and student ventures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OTHER PROJECTS ================= -->
+<section id="other-projects" class="section-border">
+  <div class="wrap">
+    <div class="kicker">Other Projects</div>
+    <h2 class="section-title">Earlier and parallel builds</h2>
+    <p class="section-sub">Three further ventures and civic projects in agriculture, waste management and applied AI — earlier-stage than DialSense, but each one shipped, tested and placed in competition.</p>
+
+    <div class="ventures">
+
+      <!-- VUNALINK -->
+      <div class="venture">
         <div class="v-media">
-          <div class="v-media-single"><img src="ns_images/vunalink_award.jpg" alt="VunaLink TechX Rwanda award"></div>
-          <div class="v-media-cap">TechX Rwanda 2026 — Hackathon Runner-Up plaque, awarded to VunaLink</div>
+          <div class="v-media-single"><img src="ns_images/vunalink_award.jpg" alt="VunaLink — TechX Rwanda 2026 Hackathon Runner-Up"></div>
+          <div class="v-media-cap">TechX Rwanda 2026 — Hackathon Runner-Up, awarded to VunaLink (IEEE CS SYP).</div>
         </div>
         <div class="v-text">
           <div class="v-badge">
@@ -392,11 +763,59 @@
             2nd Place · TechX Rwanda 2026
           </div>
           <div class="v-name">VunaLink</div>
-          <p>An offline, AI-powered crop disease detection app that helps Rwandan smallholder farmers diagnose diseases and access treatment guidance in Kinyarwanda, without needing internet connectivity.</p>
+          <p>An offline, AI-powered crop disease detection app that helps Rwandan smallholder farmers diagnose diseases and access treatment guidance in Kinyarwanda — with no internet connection required. https://vunalink.vercel.app/</p>
           <ul class="v-facts">
-            <li>Runner-up, TechX Rwanda 2026 Hackathon (IEEE CS SYP)</li>
-            <li>Built for a country where only 37% of rural residents have reliable internet access</li>
-            <li>Diagnosis and treatment guidance delivered entirely in Kinyarwanda</li>
+            <li><b>Runner-Up, TechX Rwanda 2026 Hackathon</b>, hosted by IEEE CS SYP</li>
+            <li>Built for a market where only <b>37% of rural residents</b> have reliable internet access</li>
+            <li>Diagnosis and treatment guidance delivered <b>entirely in Kinyarwanda</b></li>
+            <li>Team size at competition: <b> 3 members</b> </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SANI-LINK -->
+      <div class="venture reverse">
+        <div class="v-media">
+          <div class="v-media-single">
+            <img src="ns_images/sani_link.png" alt="Sani-Link — waste management civic technology project">
+          </div>
+          <div class="v-media-cap">Sani-Link — founded as a Millennium Fellowship project on waste management civic technology.</div>
+        </div>
+        <div class="v-text">
+          <div class="v-badge">
+            <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>
+            Founder · Millennium Fellowship Project
+          </div>
+          <div class="v-name">Sani-Link</div>
+          <p>A civic technology project on waste management, founded and run inside the Millennium Fellowship portfolio at ALU Rwanda, applying the same build-and-measure discipline as the venture work.</p>
+          <ul class="v-facts">
+            <li>Founded as a <b>Millennium Fellowship</b> project within the 26-Fellow ALU Rwanda portfolio</li>
+            <li>Community members reached: <b>300</b></li>
+            <li>Waste collection partners engaged: <b>3</b> </li>
+            <li>Current stage: <b>piloting and scoping</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ORGSCREEN -->
+      <div class="venture">
+        <div class="v-media">
+          <div class="v-media-single">
+            <img src="ns_images/orgscreen.jpg" alt="OrgScreen — Umurava AI Hackathon top 35">
+          </div>
+          <div class="v-media-cap">OrgScreen — Top 35 at the Umurava AI Hackathon.</div>
+        </div>
+        <div class="v-text">
+          <div class="v-badge">
+            <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>
+            Top 35 · Umurava AI Hackathon
+          </div>
+          <div class="v-name">OrgScreen</div>
+          <p>An AI build taken to the top 35 of the Umurava AI Hackathon — Nuake's first solo technical competition entry and the project that pushed him into applied machine learning.</p>
+          <ul class="v-facts">
+            <li><b>Top 35</b> finish at the Umurava AI Hackathon out of <b>250</b> total entries</li>
+            <li>Built with <b>Python</b> and <b>AWS AI &amp; ML workflows</b> (AWS AI Practitioner certified)</li>
+            <li>Team size: <b>solo</b> — placeholder to confirm</li>
           </ul>
         </div>
       </div>
@@ -405,72 +824,65 @@
   </div>
 </section>
 
-<section id="leadership" class="leadership-section section-border">
+<!-- ================= GLP ================= -->
+<section id="glp" class="section-border">
   <div class="wrap">
-    <div class="kicker">Leadership</div>
-    <h2 class="section-title">Leading people, not just projects</h2>
-    <p class="section-sub">Roles where Nuake is responsible for other people's growth and outcomes, not only his own.</p>
+    <div class="kicker">ALU Global Leadership Program — Silicon Valley 2027</div>
+    <h2 class="section-title">Why this student, and what ALU gets back</h2>
+    <p class="section-sub">The GLP asks for a student with a venture at an intermediate stage of maturity, a demonstrated leadership record, and the poise to represent ALU in front of partners, foundations and donors. Here is the evidence, and here is the return plan.</p>
 
-    <div class="lead-grid">
-      <div class="lead-card">
-        <div class="lead-card-media"><img src="ns_images/mcn_banner.png" alt="Millennium Fellowship Campus Director badge"></div>
-        <div class="lead-card-body">
-          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.3 4.5 2.3 4.5 5"/></svg></div>
-          <h3>Campus Director, Millennium Fellowship</h3>
-          <p>Leads ALU Rwanda's Cohort B of the Millennium Fellowship, welcoming and guiding the Class of 2026 fellows.</p>
-        </div>
+    <div class="glp-grid">
+      <div class="glp-card">
+        <b>1.4B</b>
+        <span>People in Africa, with a combined GDP near $3.4 trillion under the AfCFTA</span>
       </div>
-      <div class="lead-card">
-        <div class="lead-card-media"><img src="ns_images/fmk_headshot.jpg" alt="Future Makers Kigali cohort"></div>
-        <div class="lead-card-body">
-          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
-          <h3>Future Makers Kigali Fellow</h3>
-          <p>Selected among only 50 city-wide applicants, and part of the 6% of non-Rwandan international fellows, for this Westerwelle Startup Haus entrepreneurship programme.</p>
-        </div>
+      <div class="glp-card">
+        <b>~15%</b>
+        <span>Share of African exports that go to other African countries — the gap Nuake studies</span>
       </div>
-      <div class="lead-card">
-        <div class="lead-card-media"><img src="ns_images/firesidechat.png" alt="Beyond the Classroom fireside chat panel"></div>
-        <div class="lead-card-body">
-          <div class="lead-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3c-4 0-7 2.7-7 6.3 0 2 1 3.8 2.6 5-.2 1-1 2-1.9 2.7 1.5.2 3-.2 4.2-1 .7.2 1.4.3 2.1.3 4 0 7-2.7 7-6.3S16 3 12 3z"/></svg></div>
-          <h3>Panelist, Beyond the Classroom</h3>
-          <p>Selected as a student panelist for the IBT Faculty's fireside chat, connecting classroom finance to real student ventures.</p>
-        </div>
+      <div class="glp-card">
+        <b>37%</b>
+        <span>Of rural Rwandans have reliable internet — the constraint VunaLink was built around</span>
+      </div>
+      <div class="glp-card">
+        <b>3 workshops · 300 students</b>
+        <span>Committed within 3 months of returning from California</span>
+      </div>
+      <div class="glp-card">
+        <b>26 + 125 + 300</b>
+        <span>Millennium Fellows, Hult Prize students and YTS members the experience cascades to</span>
+      </div>
+      <div class="glp-card">
+        <b>1,500 → 5,000</b>
+        <span>Students reached by graduation, and within five years after</span>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="nomination" class="section-border">
-  <div class="wrap">
-    <div class="kicker">Scholars Assembly Nomination</div>
-    <h2 class="section-title">Assembly Spotlight Responses</h2>
-    <p class="section-sub">Use this as reference if you are nominating Nuake for the 18 September Assembly. Feel free to reuse or adapt this text.</p>
 
     <div class="nom-box">
       <div class="nom-meta">
         <div><span>Full name</span><b>Nuake Justice Tsekpo Jnr.</b></div>
-        <div><span>Year group</span><b>Second year (September 2025 intake)</b></div>
-        <div><span>Programme</span><b>BSc IBT</b></div>
-        <div><span>Category</span><b>Entrepreneurship / Leadership</b></div>
+        <div><span>Year group</span><b>Second year (Class of 2029)</b></div>
+        <div><span>Programme</span><b>BSc International Business &amp; Trade, ALU Rwanda</b></div>
+        <div><span>Category</span><b>Venture founder &amp; outstanding student leader</b></div>
       </div>
 
-      <h3><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v6h6"/></svg>Nomination write-up</h3>
-      <p>Nuake leads multiple ventures at the intersection of technology and impact for underserved African communities. Among his notable achievements, he won 2nd place (Hackathon Runner-Up) at the TechX Rwanda 2026 Hackathon with VunaLink, an offline, AI-powered crop disease detection app that helps Rwandan smallholder farmers diagnose diseases and access treatment guidance in Kinyarwanda, without requiring internet connectivity. He also serves as Venture Lead of DialSense (BahoCare), a health-tech venture building predictive maintenance systems for hospital equipment, beginning with dialysis machines. BahoCare has since onboarded new ALU students to its founding team, in pursuit of a mission to have 80% of its founding team and workforce composed of current ALU students or alumni, strengthening access to opportunity and creating jobs within the ALU ecosystem.
-
-Beyond building ventures, Nuake leads people. He currently serves as Campus Director for the Millennium Fellowship (ALU Rwanda Campus) and Strategy and Implementation Lead for the upcoming Young Trade Society (World Trade Organisation) chapter at ALU. He also spearheads the Growth and Insights projects at Student Companion AI, where he enables five interns in the Marketing and Operations Department to fulfill their skills immersion credits by gaining real-world experience and applying classroom learning in practice. Nuake's vision is to empower and involve ALU students, particularly fellow Mastercard Foundation Scholars, in his entrepreneurial endeavours. He also serves as Publicity Team Lead for the IEEE East Africa Humanitarian Technology Summit, coordinating teams and driving visibility for initiatives that reach hundreds of students and community members.</p>
-
-      <h3><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>Specific successes / highlights</h3>
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.5 6.8L12 17.6 6.5 20.7 8 13.9 3 9.3l6.4-.7L12 2z"/></svg>Return on investment — what ALU gets back</h3>
       <ul class="highlight-list">
-        <li>Campus Director, Millennium Fellowship, ALU Rwanda, Currently oversees more than 20+ social impact projects and ventures being built by ALU students</li>
-        <li>Venture Lead of DialSense/BahoCare — 2nd Place and $2,000 seed grant, ALU Waiting Room Hackathon; 12-week CHII incubation; featured in ALU's 10-Year Impact Report</li>
-        <li>2nd place, TechX Rwanda 2026 Hackathon, with VunaLink</li>
-        <li>Mastercard Foundation Academic Excellence Award, BSc IBT cohort, January 2026 term</li>
-        <li>Westerwelle Startup Haus Future Makers Kigali cohort participant</li>
-        <li>Growth and Insights Lead, Student Companion AI</li>
-        <li>Coordinated ALU's first delegation to the Global Microfinance Case Competition 2026, seven teams</li>
-        <li>Founded Sani-Link, a Millennium Fellowship project on waste management civic technology</li>
-        <li>Led team to the Global Interview Stage of 180 Degrees Consulting's Global Case Competition (client: Barefoot College)</li>
-      
+        <li><b>3 workshops for 300 ALU students</b> within 3 months of returning, plus 1 written report to his facilitators and 3 published articles on tech and trade flows</li>
+        <li>Direct cascade to the <b>26 Millennium Fellows</b>, the <b>25 Hult Prize teams (125 students)</b> and the <b>300+ Young Trade Society members</b> he leads</li>
+        <li>Applied to <b>DialSense hardware</b> — supply chain, customs and distribution decisions for a device targeting 100 machines in 10 hospitals by 2030</li>
+        <li>Applied to <b>VunaLink</b> — an offline-first product for the 63% of rural Rwandans without reliable internet</li>
+        <li>Trade policy output: an analytical article on the WTO MC14 already published to a professional LinkedIn audience</li>
+        <li>Long-run multiplier: a stated target of <b>1,500 students reached by graduation</b> and <b>5,000 within five years after</b></li>
+      </ul>
+
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Eligibility check</h3>
+      <ul class="highlight-list">
+        <li>Second-year ALU Rwanda student — <b>meets the 2nd/3rd year requirement</b></li>
+        <li>Existing venture at an intermediate stage — <b>DialSense: seed-funded, incubating, 4 hospitals in validation</b></li>
+        <li>Extraordinary leadership recognition — <b>2 Campus Director mandates, 3 MCF Scholars awards, 1 of 50 Future Makers Fellows</b></li>
+        <li>US visa eligibility and financial capacity for visa fees — <b>Eligible with no restrictions</b></li>
+        <li>Full-programme commitment (pre-trip prep, ~2 weeks in California, post-trip deliverables) — <b>confirmed, with a written return plan above</b></li>
       </ul>
     </div>
   </div>
@@ -480,36 +892,24 @@ Beyond building ventures, Nuake leads people. He currently serves as Campus Dire
   <div class="wrap">
     <div class="cta-inner">
       <div>
-        <div class="kicker">For fellow Scholars</div>
-        <h2 class="section-title">Nominate Nuake for the Assembly spotlight</h2>
-        <p>Nominations close Wednesday, 9 September 2026, 11:59 PM. You can use the write-up above as-is, or write your own based on what you've seen him build.</p>
+        <div class="kicker">For faculty and staff</div>
+        <h2 class="section-title">Nominate Nuake for GLP Silicon Valley 2027</h2>
+        <p>Students cannot apply directly — only faculty and staff can nominate, and each nominator may put forward just 2 to 3 students. Everything on this page is written to be pasted straight into the nomination form. Faculty and staff need time to submit, so please aim to do this well before the 15 October deadline.</p>
         <div class="btn-row">
-          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSecN1ysjuUXc9ji3yAvwJlTRM6di11ws_nXl4pJ0k4fwk0Xhw/viewform" target="_blank" rel="noopener">
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe529SpHgS33YA0eE7136eWYxIlg4bc9YQUBQAR0HYaz-eIbg/formResponse" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             Open Nomination Form
           </a>
-          <a class="btn-secondary" href="ns_images/ARSN0699.jpg" download>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
-            Download Photo
-          </a>
+          
         </div>
       </div>
-      <div class="steps">
-        <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>How to nominate</h4>
-        <ol>
-          <li>Open the nomination form above.</li>
-          <li>Fill in your own name and details as the nominator.</li>
-          <li>Paste the write-up and highlights from this page.</li>
-          <li>Download and upload the photo above.</li>
-          <li>Submit before 9 September, 11:59 PM.</li>
-        </ol>
-      </div>
+      
     </div>
   </div>
 </section>
 
 <footer>
-  Built for the Mastercard Foundation Scholars General Assembly — 18 September 2026, Leadership Center.
+  Prepared for faculty and staff considering a nomination for the ALU Global Leadership Program — Silicon Valley 2027.
 </footer>
 
 </body>
